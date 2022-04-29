@@ -1,0 +1,51 @@
+package javaapplication5;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author a_her
+ */
+public class StudentGrades
+{
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter  full name of student: ");
+        String n = in.nextLine();
+        System.out.print("Enter class of student: ");
+        int c = in.nextInt();
+        System.out.print("Enter admission no of student: ");
+        int r = in.nextInt();
+        System.out.print("Enter marks in Math: ");
+        int m1 = in.nextInt();
+        System.out.print("Enter marks in Science: ");
+        int m2 = in.nextInt();
+        System.out.print("Enter marks in English: ");
+        int m3 = in.nextInt();
+        System.out.print("Enter marks in History: ");
+        int m4 = in.nextInt();
+        System.out.print("Enter marks in ICT: ");
+        int m5 = in.nextInt();
+        int t = m1 + m2 + m3 + m4 + m5;
+        double p = t / 500.0 * 100.0;
+        String g = "";
+        if (p >= 90)
+            g = "A+";
+        else if (p >= 80)
+            g = "A";
+        else if (p >=70)
+            g = "B+";
+        else if (p >= 60)
+            g = "B";
+        else if (p >= 50)
+            g = "C";
+        else if (p >= 40)
+            g = "D";
+        else
+            g = "E";
+            
+        System.out.println("Total Marks = " + t);
+        System.out.println("Percentage = " + p);
+        System.out.println("Grade = " + g);
+    }
+}
